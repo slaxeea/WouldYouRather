@@ -41,18 +41,3 @@ exports.likePost = (req, res) => {
       console.error(err);
     });
 };
-
-// Get one Image
-exports.getImage = (req, res) => {
-  var api_url =
-    "https://api.thecatapi.com/v1/images/search?api_key=7afdb08a-1a4c-4f5a-b4dd-aa4f8a134896";
-  let response = fetch(api_url);
-  async function get(api_url) {
-    response = await fetch(api_url);
-    var data = await response.json();
-    let tab;
-    return {
-      tab = <img url = {`${data.url}`}></img>
-    }
-  }
-};

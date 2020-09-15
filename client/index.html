@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -21,32 +20,23 @@
     <h1 class="cover-heading">Click on the cat you like more</h1>
     <br /><br /><br />
 
-    <script src=images.js></script>
-    
-<div class="img-cont" style="display: inline;">
-    <img
-      class="rounded"
-      id="image1"
-      alt="cat pic"
-      onclick="onclickfunc()"
-    />
-</div>
+    <script src="images.js"></script>
 
-<div class="img-cont" style="display: inline;">
-    <img
-      class="rounded"
-      id="image2"
-      alt="cat pic"
-      onclick="onclickfunc()"
-    />
-</div>
+    <div class="img-cont" style="display: inline">
+      <img class="rounded" id="image1" alt="cat pic" onclick="onclickfunc(1)" />
+    </div>
+
+    <div class="img-cont" style="display: inline">
+      <img class="rounded" id="image2" alt="cat pic" onclick="onclickfunc(2)" />
+    </div>
 
     <script>
-        function onclickfunc(){
-        var script = document.createElement('script');  
-        script.src = "onclickfunc.js"; 
-        document.head.appendChild(script) 
-        }
+      function onclickfunc(num) {
+        var script = document.createElement("script");
+        script.src = "onclickfunc.js";
+        document.head.appendChild(script);
+        sessionStorage.setItem("number", num);
+      }
     </script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

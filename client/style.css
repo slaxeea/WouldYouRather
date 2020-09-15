@@ -51,27 +51,27 @@ body {
   font-weight: 700;
 }
 
-
 .img {
+}
+
+#image1,
+#image2 {
+  display: inline-block;
   margin-right: 5px;
   margin-left: 5px;
   display: inline-block;
   max-width: 500px;
   height: auto;
-  max-height: 800px;
+  max-height: 400px;
 }
 
-#image1, #image2{
-  margin-right: 5px;
-  margin-left: 5px;
-  display: inline-block;
-  max-width: 500px;
-  height: auto;
-  max-height: 500px;
-}
-
-.img-cont :hover{
+.img-cont{
+  padding: 2px;
   margin: 5px, 5px, 5px, 5px;
-  display: inline;
+  overflow: hidden;
+}
+.img-cont :hover {
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5);
+  background-color: #333;
   border: 1px solid white;
 }
