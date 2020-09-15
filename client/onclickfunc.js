@@ -1,4 +1,4 @@
-// const axios = require('axios');
+var https = require('https');
 
 // Send link
 var num = sessionStorage.getItem("number");
@@ -7,7 +7,33 @@ var data = {
     url: imgurl
 };
 
-console.log(imgurl);
+var options = {
+    hostname: 'wouldyourather-a4ad8.firebaseapp.com',
+    path: '/images',
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': data.length
+    }
+}
+
+const req = https.request(options, (res) => {
+    console.log('Status Code:', res.statusCode);
+
+    res.on('data', (chunk) => {
+        data += chunk;
+    });
+
+    res.on('end', () => {
+        console.log('Body: ', JSON.parse(data));
+    });
+
+}).on("error", (err) => {
+    console.log("Error: ", err.message);
+});
+
+req.write(data);
+req.end();
 
 
 // Load new Image
