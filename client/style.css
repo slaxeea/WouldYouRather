@@ -61,11 +61,17 @@ body {
   max-height: 800px;
 }
 
-#image{
+#image1, #image2{
   margin-right: 5px;
   margin-left: 5px;
   display: inline-block;
   max-width: 500px;
   height: auto;
   max-height: 500px;
+}
+
+.img-cont :hover{
+  margin: 5px, 5px, 5px, 5px;
+  display: inline;
+  border: 1px solid white;
 }

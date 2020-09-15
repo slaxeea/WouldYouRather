@@ -1,9 +1,6 @@
 var container = document.createElement("div");
 container.setAttribute("class", "container");
 
-var i =0;
-
-for(i = 0; i<2; i++){
 var request = new XMLHttpRequest();
   request.open(
     "GET",
@@ -12,7 +9,6 @@ var request = new XMLHttpRequest();
   );
 
 request.onload = function() {
-  console.log("in onload");
   if (request.status >= 200 && request.status < 400) {
     var data = JSON.parse(this.response);
     // console.log(data);
@@ -20,17 +16,45 @@ request.onload = function() {
     const imageurl = data[0].url;
     console.log(imageurl);
 
-    const image = document.getElementById(`image${i}`)
+    const image = document.getElementById("image1")
     image.class = "rounded";
-    image.id = "image";
+    image.id = "image1";
     image.src = imageurl;
     image.alt = "cat pic";
 
   } else {
-    console.error("Something went wrong");
+    console.error("Something went wrong. status:  "+request.status);
   }
 
 };
 
 request.send();
-}
+
+var request2 = new XMLHttpRequest();
+  request2.open(
+    "GET",
+    "https://api.thecatapi.com/v1/images/search?api_key=7afdb08a-1a4c-4f5a-b4dd-aa4f8a134896",
+    true
+  );
+
+request2.onload = function() {
+  if (request2.status >= 200 && request2.status < 400) {
+    var data = JSON.parse(this.response);
+    // console.log(data);
+
+    const imageurl = data[0].url;
+    console.log(imageurl);
+
+    const image = document.getElementById("image2")
+    image.class = "rounded";
+    image.id = "image2";
+    image.src = imageurl;
+    image.alt = "cat pic";
+
+  } else {
+    console.error("Something went wrong. status:  "+request2.status);
+  }
+
+};
+
+request2.send();

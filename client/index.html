@@ -18,26 +18,36 @@
     <title>aaaaaaaaaaaaaa</title>
   </head>
   <body>
-    <h1 class="cover-heading">Click on the cat you like better</h1>
+    <h1 class="cover-heading">Click on the cat you like more</h1>
     <br /><br /><br />
 
     <script src=images.js></script>
-
-
-    <img
-      class="rounded"
-      id="image2"
-      alt="cat pic"
-      onclick="img.onclick()"
-    />
-    <!--
+    
+<div class="img-cont" style="display: inline;">
     <img
       class="rounded"
       id="image1"
       alt="cat pic"
-      onclick="img.onclick()"
+      onclick="onclickfunc()"
     />
-    -->
+</div>
+
+<div class="img-cont" style="display: inline;">
+    <img
+      class="rounded"
+      id="image2"
+      alt="cat pic"
+      onclick="onclickfunc()"
+    />
+</div>
+
+    <script>
+        function onclickfunc(){
+        var script = document.createElement('script');  
+        script.src = "onclickfunc.js"; 
+        document.head.appendChild(script) 
+        }
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
