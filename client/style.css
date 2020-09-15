@@ -60,3 +60,12 @@ body {
   height: auto;
   max-height: 800px;
 }
+
+#image{
+  margin-right: 5px;
+  margin-left: 5px;
+  display: inline-block;
+  max-width: 500px;
+  height: auto;
+  max-height: 500px;
+}

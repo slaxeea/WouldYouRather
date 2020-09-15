@@ -3,7 +3,7 @@ container.setAttribute("class", "container");
 
 var i =0;
 
-for (i = 0; i < 2; i++) { 
+for(i = 0; i<2; i++){
 var request = new XMLHttpRequest();
   request.open(
     "GET",
@@ -11,26 +11,24 @@ var request = new XMLHttpRequest();
     true
   );
 
-console.log("past request");
 request.onload = function() {
   console.log("in onload");
   if (request.status >= 200 && request.status < 400) {
     var data = JSON.parse(this.response);
-    console.log(data);
+    // console.log(data);
 
-    const imgurl = this.response[0].url;
+    const imageurl = data[0].url;
+    console.log(imageurl);
 
-    const html = index.html;
-    const image = html.getElementById(`image${i}`)
+    const image = document.getElementById(`image${i}`)
     image.class = "rounded";
     image.id = "image";
-    image.src = imgurl;
+    image.src = imageurl;
     image.alt = "cat pic";
+
   } else {
     console.error("Something went wrong");
   }
-
-  console.log("after load");
 
 };
 
