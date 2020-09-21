@@ -1,6 +1,6 @@
 var request = new XMLHttpRequest();
 
-request.open("GET", "https://random-d.uk/api/random", true);
+request.open("GET", "https://picsum.photos/200/300", true);
 
 request.onload = function () {
   if (request.status >= 200 && request.status < 400) {
@@ -26,7 +26,7 @@ request.send();
 
 var request2 = new XMLHttpRequest();
 
-request2.open("GET", "https://random-d.uk/api/random", true);
+request2.open("GET", "https://picsum.photos/200/300", true);
 
 request2.onload = function () {
   if (request2.status >= 200 && request2.status < 400) {

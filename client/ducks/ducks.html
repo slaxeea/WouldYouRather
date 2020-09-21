@@ -24,19 +24,21 @@
       </button>
       </a>
 
-    <h1 class="cover-heading">Coming soon lol</h1>
+    <h1 class="cover-heading">Click on the duck you like more</h1>
     <br /><br /><br />
 
+    
+    <div class="img-cont" style="display: inline">
+      <img class="rounded" id="image1" src="https://picsum.photos/600/600" />
+    </div>
+
+    <div class="img-cont" style="display: inline">
+      <img class="rounded" id="image2" src="https://picsum.photos/600/610" />
+    </div>
+
     <!--
-    <div class="img-cont" style="display: inline">
-      <img class="rounded" id="image1" alt="duck pic" onclick="onclickfunc(1)" />
-    </div>
-
-    <div class="img-cont" style="display: inline">
-      <img class="rounded" id="image2" alt="duck pic" onclick="onclickfunc(2)" />
-    </div>
-
     <script src="images.js"></script>
+    -->
 
     <script>
       function onclickfunc(num) {
@@ -46,7 +48,6 @@
         sessionStorage.setItem("number", num);
       }
     </script>
-    -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
