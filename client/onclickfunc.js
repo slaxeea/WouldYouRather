@@ -1,3 +1,4 @@
+/*
 import { https } from 'https';
 
 // Send link
@@ -35,7 +36,7 @@ const req = https
 
 req.write(data);
 req.end();
-
+*/
 // Load new Image
 var script = document.createElement("script");
 script.src = "images.js";
