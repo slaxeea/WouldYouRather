@@ -1,9 +1,3 @@
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -20,6 +14,7 @@ body {
   text-align: center;
   height: 100%;
   background-color: #333;
+  color: white;
 }
 html,
 body {
@@ -34,13 +29,7 @@ html {
 body {
   display: table-cell;
   vertical-align: middle;
-}
 
-body {
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 
 .cover {
@@ -49,9 +38,6 @@ body {
 .cover .btn-lg {
   padding: 0.75rem 1.25rem;
   font-weight: 700;
-}
-
-.img {
 }
 
 #image1,
@@ -75,4 +61,24 @@ body {
   background-color: #333;
   border: 1px solid white;
   cursor: pointer;
+}
+
+.home-btn{
+  display: inline-block;
+  border: 1px solid rgb(0, 0, 0);
+  border: none;
+  margin: 10px;
+  background-color: rgba(19, 19, 19, 0.664);
+  color: white;
+  padding-left:  20px;
+  padding-right:  20px; 
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 25px;
+}
+
+.home-btn:hover{
+  border: 1px solid white;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0);
 }
