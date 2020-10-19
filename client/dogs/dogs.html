@@ -6,39 +6,37 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
+    <!--
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    -->
     <link rel="stylesheet" href="../style.css" />
-    <title>Ducks</title>
+    <title>Dogs</title>
   </head>
   <body>
-      
+
     <a href="../index.html">
-        <button class="home-btn" style="position: absolute; top: 0; left: 0;">
-            Home
-      </button>
-      </a>
+      <button class="home-btn" style="position: absolute; top: 0; left: 0;">
+          Home
+    </button>
+    </a>
 
-    <h1 class="cover-heading">Click on the duck you like more</h1>
+    <h1 class="cover-heading">Click on the dog you like more</h1>
     <br /><br /><br />
-
-    
+   
     <div class="img-cont" style="display: inline">
-      <img class="rounded" id="image1" src="https://picsum.photos/600/600" />
+      <img class="rounded" id="image1" alt="dog pic" onclick="onclickfunc(1)" />
     </div>
 
     <div class="img-cont" style="display: inline">
-      <img class="rounded" id="image2" src="https://picsum.photos/600/610" />
+      <img class="rounded" id="image2" alt="dog pic" onclick="onclickfunc(2)" />
     </div>
 
-    <!--
     <script src="images.js"></script>
-    -->
 
     <script>
       function onclickfunc(num) {
@@ -48,6 +46,7 @@
         sessionStorage.setItem("number", num);
       }
     </script>
+    <!--
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -63,5 +62,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    -->
   </body>
 </html>
