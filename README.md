@@ -1,6 +1,6 @@
 # WouldYouRather                                        
  
- S Repository zu eusem (mim) Projekt im Lernatelier    
+Das Repository zu unserem Projekt für das Lernatelier
 
  Die Seite ist in JavaScript geschrieben und benützt die APIs von TheCatApi / TheDogApi
  (https://thecatapi.com/ / https://thedogapi.com/)
